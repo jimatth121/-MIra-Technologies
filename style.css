@@ -7,28 +7,73 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     background-color: beige;
+    height: 100vh;
     
 }
 
 nav{
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    align-content: end;
 
 }
-nav .nav__list{
+ .nav__list{
+    position: absolute;
     list-style: none;
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    top: 100%;
+    left: 0;  
+    background-color: inherit; 
+    width: 100%;
+    transition: all 200ms ease-in-out;
+    padding: .5rem;
     
 }
+
+.nav__open{
+    height: 10rem;
+    overflow: visible;
+    z-index: 10;
+    visibility: visible;
+    
+}
+
+.close__btn{
+    display: none !important;
+}
+
+.hide{
+   display: none !important;
+}
+.show{
+    display: block !important;
+}
+
+.times{
+    color: blue;
+    font-size: 100px;
+}
+
 .nav__link a{
+    display:inline-block;
     text-decoration: none;
     text-transform: uppercase;
     color: gray;
-    padding: 1rem;
+    padding: .9rem;
+    width: 100%;
+    
+    
 }
 
 .nav__link a:hover{
@@ -36,39 +81,93 @@ nav .nav__list{
     color: #fff;
 }
 
+
+@media (min-width:700px) {
+     .nav__list{
+        list-style: none;
+        flex-direction: row;
+        gap: 2rem;
+        overflow: visible;
+        height: auto;
+        position: static;
+        visibility: visible; 
+    } 
+
+    .menu__btn{
+        display: none;
+    }
+
+    .open__btn,.close__btn{
+        display: none !important;
+    }
+}
+.nav__link a{
+display: inline;
+}
+
+.setIcon{
+    /* padding: 4rem; */
+    display: flex;
+    align-items: center;
+   
+}
+
 .searcher{
-    margin: 1rem;
-    text-align: end;
+    margin: 1.9rem 0;
+    align-self: flex-end;
+    /* text-align: end; */
+    position: relative;
+    right: 0;
+    /* padding-left: 1rem; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+   
+   
+   
 }
 .searcher__width{
     width: 200px;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 20px;
-    padding: .7rem;
+    padding: .8rem 1.2rem;
     background-color: inherit;
 }
-.wrapper{
- /* overflow: scroll;  */
- padding: 0 1rem;  
+
+.searcher .icon{
+    position: absolute;
+    left: 172px ;
+    top: 5px;
 }
+section{
+    padding: 0 1rem; 
+    flex-grow: 1; 
+    /* overflow-x:auto;  */
+}
+
+
+
+
 table{
     display: block;
-    margin: 0 1rem;
+    margin: 0 .5rem;
     border-spacing: 0;
     /* overflow: scroll; */
 
     
 }
+@media (max-width:1370px) {
+    table{
+        overflow: scroll;
+    }
+}
+
 .table__header{
     background-color: rgb(23, 22, 22);
     color: #eee;
     padding: 2rem;
-    border: 1px solidrgb(23, 22, 22);;
-    border-radius: 5rem;
-    margin-bottom: 2rem;
-    display: i;
-    
-    
+    border: 1px solid rgb(23, 22, 22);;
+    border-radius: 2rem;
+    /* margin-bottom: 1rem; */
 }
 
 .table__header th{
@@ -78,9 +177,20 @@ table{
    padding: .2rem;
 }
 
+.first__header{
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+.last__header{
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
 tr td{
     font-size: 10px;
-    border: 4px solid transparent;
+    /* border: 4px solid transparent; */
+    padding: 3px;
+
 }
 
 tr td .table__btn{
@@ -89,15 +199,30 @@ tr td .table__btn{
     border-radius: 5px;
     border: none;
     font-size: 10px;
+    color: #fff;
 }
 
 tr td .input__width{
-    width: 70px;
+    width: 75px;
     background-color: #fff;
     border-radius: 3px ;
     text-align: center;
     border: 2px solid gray;
+    position: relative;
 }
+
+
+.div__items{
+  position: relative;  
+}
+.input__icon__btn{
+    position: absolute;
+    top: 2px;
+    left: 60px;
+    z-index: 10;
+    font-size: 15px;
+}
+
 
 tr td .input__width__small{
     width: 30px;
@@ -111,9 +236,10 @@ tr td .first__row{
     width: 120px;
 }
 
+
+
 footer{
-    font-size: 1.5rem;
-    margin-top: 370px;
+    font-size: 1rem;
     padding: 1rem;
     background-color: #fff;
 }
