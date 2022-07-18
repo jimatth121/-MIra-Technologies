@@ -14,13 +14,22 @@ body{
     
 }
 
+header{
+    display: flex;
+}
+.logo img{
+    height: 70px;
+    display: none !important;
+}
 nav{
-    padding: 1rem;
+    padding: .5rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
     position: relative;
     align-content: end;
+    flex-grow: 1;
+    border: none;
 
 }
  .nav__list{
@@ -38,6 +47,7 @@ nav{
     width: 100%;
     transition: all 200ms ease-in-out;
     padding: .5rem;
+    align-items: center;
     
 }
 
@@ -100,6 +110,10 @@ nav{
     .open__btn,.close__btn{
         display: none !important;
     }
+    
+    .logo img{
+        display: block !important;
+    }
 }
 .nav__link a{
 display: inline;
@@ -109,6 +123,7 @@ display: inline;
     /* padding: 4rem; */
     display: flex;
     align-items: center;
+    margin-right: 2rem;
    
 }
 
@@ -129,14 +144,14 @@ display: inline;
     width: 200px;
     border-radius: 12px;
     height: 20px;
-    padding: .8rem 1.2rem;
+    padding: .8rem 1.8rem 1rem;
     background-color: inherit;
 }
 
 .searcher .icon{
     position: absolute;
     left: 172px ;
-    top: 5px;
+    top: 6px;
 }
 section{
     padding: 0 1rem; 
