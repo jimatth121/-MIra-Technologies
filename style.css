@@ -22,7 +22,7 @@ header{
     display: none !important;
 }
 nav{
-    padding: .5rem;
+    padding: 0rem .5rem 0rem 1rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -30,6 +30,7 @@ nav{
     align-content: end;
     flex-grow: 1;
     border: none;
+
 
 }
  .nav__list{
@@ -102,7 +103,7 @@ nav{
         position: static;
         visibility: visible; 
     } 
-
+   
     .menu__btn{
         display: none;
     }
