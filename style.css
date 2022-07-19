@@ -22,7 +22,7 @@ header{
     display: none !important;
 }
 nav{
-    padding: 0rem .5rem 0rem 1rem;
+    padding: .5rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -30,6 +30,7 @@ nav{
     align-content: end;
     flex-grow: 1;
     border: none;
+    
 
 
 }
@@ -49,6 +50,7 @@ nav{
     transition: all 200ms ease-in-out;
     padding: .5rem;
     align-items: center;
+
     
 }
 
@@ -83,6 +85,7 @@ nav{
     color: gray;
     padding: .9rem;
     width: 100%;
+    transition-delay: 50ms;
     
     
 }
@@ -101,7 +104,8 @@ nav{
         overflow: visible;
         height: auto;
         position: static;
-        visibility: visible; 
+        visibility: visible;
+       
     } 
    
     .menu__btn{
@@ -129,7 +133,7 @@ display: inline;
 }
 
 .searcher{
-    margin: 1.9rem 0;
+    margin: .8rem 0;
     align-self: flex-end;
     /* text-align: end; */
     position: relative;
@@ -153,6 +157,12 @@ display: inline;
     position: absolute;
     left: 172px ;
     top: 6px;
+}
+
+@media (min-width:700px) {
+    .searcher{
+    margin: 1.9rem 0;
+}
 }
 section{
     padding: 0 1rem; 
